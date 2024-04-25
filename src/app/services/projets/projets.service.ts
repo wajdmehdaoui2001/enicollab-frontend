@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
-import {Projet} from "../../model/Projet.model";
-import {HttpClient} from "@angular/common/http";
-import {ValidationErrors} from "@angular/forms";
+import { Observable } from "rxjs";
+import { Projet } from "../../model/Projet.model";
+import { HttpClient } from "@angular/common/http";
+import { ValidationErrors } from "@angular/forms";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjetsService {
-  private backendHost = "http://localhost:8085";
+  private backendHost = "http://localhost:8091";
 
   constructor(private http: HttpClient) {
   }
 
-  getProjets() : Observable<Array<Projet>> {
+  getProjets(): Observable<Array<Projet>> {
     return this.http.get<Array<Projet>>(this.backendHost + "/projets/all")
   }
 
@@ -26,8 +26,8 @@ export class ProjetsService {
   }
 
   updateEtudiant(projet: Projet) {
-  return this.http.put(this.backendHost + "/projets/edit/"+projet.id,projet);
-}
+    return this.http.put(this.backendHost + "/projets/edit/" + projet.id, projet);
+  }
 
   getErrorMsgName(field: string, error: ValidationErrors) {
     if (error['required']) {

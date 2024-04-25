@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Observable, of, throwError} from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { OffreDeStage, OffreDeStageDetails } from '../../model/OffreDeStage';
-import {OffreStage} from "../../model/OffreStage.model";
+import { OffreStage } from "../../model/OffreStage.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class OffreDeStageService {
-  private apiUrl = 'http://localhost:8085/offre-de-stages';
-  private backendHost='http://localhost:8085';
+  private apiUrl = 'http://localhost:8091/offre-de-stages';
+  private backendHost = 'http://localhost:8091';
 
   constructor(private http: HttpClient) { }
 
@@ -86,6 +86,6 @@ export class OffreDeStageService {
   }
 
   public updateOffre(offreStage: OffreStage) {
-    return this.http.put(this.backendHost + "/offres-stage/edit/"+offreStage.id,offreStage);
+    return this.http.put(this.backendHost + "/offres-stage/edit/" + offreStage.id, offreStage);
   }
 }

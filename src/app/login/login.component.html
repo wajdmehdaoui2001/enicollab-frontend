@@ -1,42 +1,42 @@
 <section class="background-radial-gradient overflow-hidden">
   <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
     <div class="row gx-lg-5 align-items-center mb-5">
-      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-          La meilleure solution <br />
-          <span style="color: hsl(218, 81%, 75%)">pour votre gestion des stages</span>
-        </h1>
-        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-          La plateforme de gestion des stages facilite la gestion efficace du processus de stages pour les étudiants, enseignants et administrateurs.
-        </p>
+      <!-- Left Section with Welcome Message or Photo -->
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <!-- Placeholder for Photo or Welcome Message -->
+        <div class="text-center">
+          <img src="C:\SideProjects\frontEnicollab\enicollab-frontend\src\assets\img\background.jpg" alt="Welcome Image"
+            class="img-fluid rounded-circle mb-4">
+          class="img-fluid rounded-circle mb-4">
+          <!-- Alternatively, you can replace the image with a welcome message -->
+          <!-- <h2 class="fw-normal mb-3 pb-3" style="color: hsl(218, 81%, 95%)">Welcome to ENiCollab</h2> -->
+          <!-- <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+        </div>
       </div>
-      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
-        <div class="card bg-glass">
-          <div class="card-body px-4 py-5 px-md-5">
-            <div class="text-center">
-              <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+      <!-- Right Section with Login Card -->
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card bg-light shadow-lg rounded-3 border-0">
+          <div class="card-body px-5 py-4">
+            <div class="text-center mb-4">
+              <h2 class="fw-normal mb-3 pb-2">Sign in to your account</h2>
             </div>
             <form [formGroup]="loginForm" (ngSubmit)="login()">
               <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="text" class="form-control" formControlName="email" />
-                <label class="form-label">email</label>
+              <div class="mb-4">
+                <input type="text" class="form-control border-0" formControlName="email" placeholder="Email" />
               </div>
               <!-- Password input -->
-              <div class="form-outline mb-4">
-                <input type="password" class="form-control" formControlName="password"/>
-                <label class="form-label">Password</label>
+              <div class="mb-4">
+                <input type="password" class="form-control border-0" formControlName="password"
+                  placeholder="Password" />
               </div>
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-4" [disabled]="!loginForm.valid">
-                Log in
-              </button>
+              <button type="submit" class="btn btn-primary btn-block mb-4" style="background-color: #62A3AD;">Sign
+                in</button>
             </form>
           </div>
         </div>
       </div>
-      </div>
     </div>
+  </div>
 </section>
