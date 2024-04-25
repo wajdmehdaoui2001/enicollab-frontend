@@ -1,0 +1,45 @@
+<div class="container mt-3">
+    <form  >
+      
+  
+      <div class="form-group">
+        <label for="lname"> Nom du Projet</label>
+        <input type="text" class="form-control" id="lname" formControlName="lname" placeholder="Enter last name" required>
+      </div>
+   
+      <div class="form-group">
+        <label for="email">Description</label>
+        <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email" required>
+      </div>
+     
+  
+      <div class="form-group">
+        <label for="password">Date Debut</label>
+        <input type="date" class="form-control" id="password" formControlName="password" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Date Fin</label>
+        <input type="date" class="form-control" id="password" formControlName="password" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Etat du Projet</label>
+        <input type="text" class="form-control" id="password" formControlName="password" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Note</label>
+        <input type="text" class="form-control" id="password" formControlName="password" placeholder="Password" required>
+      </div>
+  
+      
+  
+  
+      <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
+      <div *ngIf="errorMessage" class="alert alert-danger mt-2">
+        {{ errorMessage }}
+      </div>
+    </form>
+  </div>
+  
+  
+  
+  

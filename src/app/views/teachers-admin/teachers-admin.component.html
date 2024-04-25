@@ -1,0 +1,53 @@
+<div class="content-wrapper">
+ 
+  <div class="col-lg-10 col-md-8" style="margin: 20px;">
+    
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Teachers
+            </h4>
+            <form class="navbar-form">
+              <span _ngcontent-nun-c2="" class="bmd-form-group">
+                    <div _ngcontent-nun-c2="" class="input-group no-border">
+                      <input type="text" [formControl]="searchControl" placeholder="Search teachers...">
+                      <button _ngcontent-nun-c2="" class="btn btn-white btn-round btn-just-icon" mat-raised-button="" type="submit">
+                            <i _ngcontent-nun-c2="" class="material-icons">search</i>
+                            <div _ngcontent-nun-c2="" class="ripple-container">
+                            </div>
+                        </button></div></span></form>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="text-primary">
+                  <tr>
+                    <th>ID</th>
+                    <th> Name</th>
+                    <th>email</th>
+                  
+                  </tr>
+                </thead>
+                <tbody  >
+                  <tr *ngFor="let teacher of teachers" >
+                    <td>{{ teacher.id }}</td>
+                    <td>{{ teacher.name }}</td>
+                    <td>{{ teacher.email }}</td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+

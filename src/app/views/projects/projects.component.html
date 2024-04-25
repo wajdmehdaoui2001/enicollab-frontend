@@ -1,0 +1,37 @@
+<div class="details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>Recent Orders</h2>
+            <a href="#" class="btn">View All</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>Nom</td>
+                    <td>Description</td>
+                    <td>Date debut</td>
+                    <td>Date fin</td>
+                    <td>Etat du projet</td>
+                    <td>Note</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let projet of projets">
+                    <td>{{projet.nom}}</td>
+                    <td>{{projet.description}}</td>
+                    <td>{{projet.dateD}}</td>
+                    <td>{{projet.dateF}}</td>
+                    
+                    <td><span class="status delivered">{{projet.etatProjet}}</span></td>
+                    <td>{{projet.note}}</td>
+                </tr>
+
+             
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= New Customers ================ -->
+   
